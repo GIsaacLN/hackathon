@@ -64,11 +64,15 @@ struct SignInView: View {
             if let error = error {
                 errorMessage = error.localizedDescription
             } else {
-                userAuth.isSignedIn = true
+                if let userId = result?.user.uid {
+                    userAuth.checkIfTransportista(userId: userId) { isTransportista in
+                        userAuth.isTransportista = isTransportista
+                        userAuth.isSignedIn = true
+                    }
+                }
             }
         }
     }
-
 }
 
                               
