@@ -7,13 +7,25 @@
 
 
 import SwiftUI
+import FirebaseAuth
 
 struct ManagerMainView: View {
+    @EnvironmentObject var userAuth: UserAuth
     @State private var searchText: String = "Buscar..."
     @State private var selectedTab: Int = 0
     
     var body: some View {
         VStack {
+            Button(action: userAuth.signOut) {
+                Text("Cerrar sesión")
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.red)
+                    .cornerRadius(8)
+            }
+            .padding(.top)
+
+            
             Text("Empresa")
                 .font(.largeTitle)
                 .padding()

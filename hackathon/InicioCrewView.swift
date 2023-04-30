@@ -14,6 +14,11 @@ private let errores = error(er : "error1", des : "descripcion")
 
 struct InicioCrewView: View {
     @EnvironmentObject var userAuth: UserAuth //Para Cerrar Sesión
+    @State private var inicio = false
+    @State private var perfil = false
+    @State private var vehiculo = false
+    @State private var mapa = false
+    @State private var ajustes = false
     @State private var progress = 0.8
 
     var body: some View {
@@ -21,14 +26,14 @@ struct InicioCrewView: View {
         NavigationView{
             VStack (alignment: .center, spacing: 5.0) {
                 
-                //        Button(action: signOut) { //Para Cerrar Sesión
-                //            Text("Cerrar sesión")
-                //                .foregroundColor(.white)
-                //                .padding()
-                //                .background(Color.red)
-                //                .cornerRadius(8)
-                //                  }
-                //        .padding(.top)
+                Button(action: userAuth.signOut) {
+                    Text("Cerrar sesión")
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.red)
+                        .cornerRadius(8)
+                }
+                .padding(.top)
                 
                 
                 Text("Empresa")
@@ -78,7 +83,6 @@ struct InicioCrewView: View {
     }
             
 }
-
 
 
 
