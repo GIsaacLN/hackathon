@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Prueba: View {
-    @State private var progress: Double = 0.0
+    @State private var progress: Double = 0.46
 
     var body: some View {
         VStack {
@@ -19,13 +19,30 @@ struct Prueba: View {
             Text("Bienvenido")
                 .font(.title2)
                 .padding(.bottom)
-
-            ProgressBar(value: $progress)
-                .frame(height: 20)
-                .padding()
+            
+            HStack{
+            
+                Image(systemName: "box.truck")
+                    .resizable()
+                    .frame(width:60,height:50)
+                    .padding()
+                
+                ProgressBar(value: $progress)
+                    .frame(height: 20)
+                    .padding()
+                
+                Image(systemName: "mappin.and.ellipse")
+                    .resizable()
+                    .frame(width:60,height:60)
+                    .padding()
+                
+            }
 
             VStack {
                 // Aquí puedes agregar los elementos para mostrar los hazards y warnings
+                NavigationView(){
+                    
+                }
             }
             .padding(.top)
 
@@ -37,7 +54,7 @@ struct Prueba: View {
                         // Acción para cada botón
                     }) {
                         // Contenido visual para cada botón
-                        Image(systemName: "circle.fill")
+                        Image(systemName: "shield.lefthalf.filled")
                     }
                     .padding()
                 }
