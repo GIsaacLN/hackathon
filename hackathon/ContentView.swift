@@ -30,6 +30,15 @@ struct ContentView: View {
                         .cornerRadius(8)
                 }
                 .padding()
+                NavigationLink(destination: UserListView()) {
+                    Text("Usuarios")
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(8)
+                }
+                .padding()
             }
             .padding()
         }

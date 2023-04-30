@@ -7,6 +7,8 @@
 import Foundation
 import SwiftUI
 import FirebaseAuth
+import Firebase
+import FirebaseFirestore
 
 struct NewUser: Codable {
     let nombre: String
@@ -22,12 +24,15 @@ struct SignUpView: View {
     @State private var name: String = ""
     @State private var lastname: String = ""
     @State private var number: String = ""
-    @State private var rfc: String = ""
-    @State private var id: String = ""
-
     @State private var errorMessage: String = ""
+    @State private var isSignedUp = false
+    let db = Firestore.firestore()
 
     var body: some View {
+        NavigationLink(destination: SignInView(), isActive: $isSignedUp) {
+            EmptyView()
+        }
+        
         VStack {
             TextField("Email", text: $email)
                 .keyboardType(.emailAddress)
@@ -83,31 +88,29 @@ struct SignUpView: View {
     }
 
     func createNewUser() {
-        guard let url = URL(string: "http://localhost:5000/usuarios") else {
-            print("Invalid URL")
-            return
-        }
-
         let newUser = NewUser(nombre: name, apellidos: lastname, correo: email, numeroDeTelefono: number, esTransportista: false)
-        guard let encodedUser = try? JSONEncoder().encode(newUser) else {
-            print("Failed to encode user")
+        guard let userId = Auth.auth().currentUser?.uid else {
+            print("No se pudo obtener el ID del usuario")
             return
         }
 
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.httpBody = encodedUser
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let _ = data, error == nil else {
-                print("Error al crear el usuario: \(error?.localizedDescription ?? "Error desconocido")")
-                return
+        db.collection("usuarios").document(userId).setData([
+            "nombre": newUser.nombre,
+            "apellidos": newUser.apellidos,
+            "correo": newUser.correo,
+            "numeroDeTelefono": newUser.numeroDeTelefono,
+            "esTransportista": newUser.esTransportista,
+            "numeroDeEmpleado": 0, // Agrega un valor predeterminado para el número de empleado
+            "rfc": "" // Agrega un valor predeterminado para el RFC
+        ]) { error in
+            if let error = error {
+                print("Error al guardar el usuario: \(error.localizedDescription)")
+            } else {
+                DispatchQueue.main.async {
+                    isSignedUp = true
+                }
             }
-            DispatchQueue.main.async {
-                SignInView()
-            }
-        }.resume()
+        }
     }
 }
 
