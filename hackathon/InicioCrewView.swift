@@ -32,13 +32,26 @@ struct InicioCrewView: View {
                     Text("¡Bienvenidos!")
                         .font(.system(size: 36))
                 }
+            Spacer()
+            Spacer()
+            Spacer()
+            Spacer()
+            Text("Resumen del viaje")
+                HStack{
+                    Spacer()
+                    Image(systemName: "box.truck")
+                        .resizable()
+                        .frame(width:30,height:30)
+                    ProgressView(value:progress)
+                    Image(systemName: "airplane")
+                    
+                }
+                
             }
             
             
             NavigationStack{
-                Text("Resumen del viaje")
-                ProgressView(placemenr: .top, value:progress)
-                
+                Text("")
                 .toolbar {
                     ToolbarItemGroup(placement: .bottomBar) {
                         Button(action:  {
