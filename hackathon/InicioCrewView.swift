@@ -14,6 +14,7 @@ struct InicioCrewView: View {
     @State private var vehiculo = false
     @State private var mapa = false
     @State private var ajustes = false
+    @State private var progress = 0.8
 
     
     var body: some View {
@@ -21,7 +22,7 @@ struct InicioCrewView: View {
             
             Section(){
                     Text("Empresa")
-                    .font(.system(size: 40, weight: .bold, design: .monospaced))
+                    .font(Font.custom("against regular", size: 30))
             }
             
             Spacer()
@@ -29,14 +30,28 @@ struct InicioCrewView: View {
             Section(){
                 HStack{
                     Text("¡Bienvenidos!")
-                        .font(.system(size: 36, weight: .bold, design: .monospaced))
-                    
-                    Spacer()
+                        .font(.system(size: 36))
                 }
+            Spacer()
+            Spacer()
+            Spacer()
+            Spacer()
+            Text("Resumen del viaje")
+                HStack{
+                    Spacer()
+                    Image(systemName: "box.truck")
+                        .resizable()
+                        .frame(width:30,height:30)
+                    ProgressView(value:progress)
+                    Image(systemName: "airplane")
+                    
+                }
+                
             }
             
+            
             NavigationStack{
-            Text("HEllos")
+                Text("")
                 .toolbar {
                     ToolbarItemGroup(placement: .bottomBar) {
                         Button(action:  {

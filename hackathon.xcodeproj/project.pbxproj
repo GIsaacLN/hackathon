@@ -31,6 +31,8 @@
 		58AC67FC29FDA21B001A1612 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC67FB29FDA21B001A1612 /* MainView.swift */; };
 		58AC680029FDA55F001A1612 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC67FF29FDA55F001A1612 /* LocationManager.swift */; };
 		FE3868DD29FDAB210037FB0D /* InicioCrewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3868DC29FDAB210037FB0D /* InicioCrewView.swift */; };
+		FE3868E229FDE2420037FB0D /* against regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE3868E129FDE2410037FB0D /* against regular.ttf */; };
+		FE3868E729FDEBB10037FB0D /* Prueba.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3868E629FDEBB10037FB0D /* Prueba.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		58AC67FB29FDA21B001A1612 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		58AC67FF29FDA55F001A1612 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FE3868DC29FDAB210037FB0D /* InicioCrewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioCrewView.swift; sourceTree = "<group>"; };
+		FE3868E129FDE2410037FB0D /* against regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "against regular.ttf"; sourceTree = "<group>"; };
+		FE3868E629FDEBB10037FB0D /* Prueba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prueba.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 		58AC67A629FD848C001A1612 = {
 			isa = PBXGroup;
 			children = (
+				FE3868DE29FDE0A00037FB0D /* Fuentes */,
 				58AC67B129FD848C001A1612 /* hackathon */,
 				58AC67C229FD848E001A1612 /* hackathonTests */,
 				58AC67CC29FD848E001A1612 /* hackathonUITests */,
@@ -131,6 +136,7 @@
 				58AC67DC29FD8E86001A1612 /* GoogleService-Info.plist */,
 				58AC67B229FD848C001A1612 /* hackathonApp.swift */,
 				FE3868DC29FDAB210037FB0D /* InicioCrewView.swift */,
+				FE3868E629FDEBB10037FB0D /* Prueba.swift */,
 				58AC67F929FD92DB001A1612 /* SignInView.swift */,
 				58AC67B429FD848C001A1612 /* ContentView.swift */,
 				58AC67F729FD9252001A1612 /* SignUpView.swift */,
@@ -165,6 +171,14 @@
 				58AC67CF29FD848E001A1612 /* hackathonUITestsLaunchTests.swift */,
 			);
 			path = hackathonUITests;
+			sourceTree = "<group>";
+		};
+		FE3868DE29FDE0A00037FB0D /* Fuentes */ = {
+			isa = PBXGroup;
+			children = (
+				FE3868E129FDE2410037FB0D /* against regular.ttf */,
+			);
+			path = Fuentes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE3868E229FDE2420037FB0D /* against regular.ttf in Resources */,
 				58AC67BA29FD848E001A1612 /* Preview Assets.xcassets in Resources */,
 				58AC67B729FD848E001A1612 /* Assets.xcassets in Resources */,
 				58AC67DD29FD8E86001A1612 /* GoogleService-Info.plist in Resources */,
@@ -320,6 +335,7 @@
 				58AC67FA29FD92DB001A1612 /* SignInView.swift in Sources */,
 				58AC67FC29FDA21B001A1612 /* MainView.swift in Sources */,
 				FE3868DD29FDAB210037FB0D /* InicioCrewView.swift in Sources */,
+				FE3868E729FDEBB10037FB0D /* Prueba.swift in Sources */,
 				58AC67B329FD848C001A1612 /* hackathonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
