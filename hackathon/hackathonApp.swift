@@ -25,10 +25,9 @@ struct hackathonApp: App {
     var body: some Scene {
         
         WindowGroup {
-            TAbBarView()
             Group {
                 if Auth.auth().currentUser != nil {
-                    InicioCrewView()
+                    TAbBarView()
                 } else {
                     SignInView().environmentObject(userAuth)
                 }

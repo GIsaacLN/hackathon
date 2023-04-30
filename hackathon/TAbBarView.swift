@@ -29,7 +29,7 @@ struct TAbBarView: View {
                     Label("", systemImage:"car.fill")
                 }
             
-            Prueba()
+            InicioCrewView()
                 .tabItem{
                     Label("", systemImage:"shield.righthalf.filled")
                 }
