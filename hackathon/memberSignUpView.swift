@@ -1,18 +1,18 @@
 //
-//  ContentView.swift
+//  memberSignUpView.swift
 //  hackathon
 //
-//  Created by Raymundo Mondragón Lara on 29/04/23.
+//  Created by Raymundo Mondragón Lara on 30/04/23.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct memberSignUpView: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: SignUpView()) {
-                    Text("Sign Up")
+                NavigationLink(destination: SignUpView(isTransportista: true)) {
+                    Text("Registrate como Transportista")
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .padding()
@@ -20,9 +20,8 @@ struct ContentView: View {
                         .cornerRadius(8)
                 }
                 .padding()
-
-                NavigationLink(destination: SignInView()) {
-                    Text("Sign In")
+                NavigationLink(destination: SignUpView(isTransportista: false)) {
+                    Text("Registrate como Capitan")
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .padding()
@@ -31,13 +30,12 @@ struct ContentView: View {
                 }
                 .padding()
             }
-            .padding()
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct memberSignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        memberSignUpView()
     }
 }
