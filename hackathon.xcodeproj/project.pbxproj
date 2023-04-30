@@ -82,7 +82,6 @@
 		58AC680529FDEED6001A1612 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		58AC680929FEBC0A001A1612 /* memberSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memberSignUpView.swift; sourceTree = "<group>"; };
 		58AC680D29FECE8F001A1612 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
-		FE28382729FEC05D001D7F6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FE28382C29FEC8A7001D7F6F /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		FE3868DC29FDAB210037FB0D /* InicioCrewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioCrewView.swift; sourceTree = "<group>"; };
 		FE3868E629FDEBB10037FB0D /* Prueba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prueba.swift; sourceTree = "<group>"; };
@@ -159,7 +158,6 @@
 		58AC67B129FD848C001A1612 /* hackathon */ = {
 			isa = PBXGroup;
 			children = (
-				FE28382729FEC05D001D7F6F /* Info.plist */,
 				58AC67DC29FD8E86001A1612 /* GoogleService-Info.plist */,
 				58AC67B229FD848C001A1612 /* hackathonApp.swift */,
 				FE28382C29FEC8A7001D7F6F /* LaunchScreenView.swift */,
