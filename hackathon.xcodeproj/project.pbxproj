@@ -32,6 +32,7 @@
 		58AC680629FDEED6001A1612 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC680529FDEED6001A1612 /* UserListView.swift */; };
 		58AC680A29FEBC0A001A1612 /* memberSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC680929FEBC0A001A1612 /* memberSignUpView.swift */; };
 		58AC680C29FEC62A001A1612 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC680B29FEC62A001A1612 /* UserAuth.swift */; };
+		FE28382D29FEC8A7001D7F6F /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE28382C29FEC8A7001D7F6F /* LaunchScreenView.swift */; };
 		FE3868DD29FDAB210037FB0D /* InicioCrewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3868DC29FDAB210037FB0D /* InicioCrewView.swift */; };
 		FE3868E729FDEBB10037FB0D /* Prueba.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3868E629FDEBB10037FB0D /* Prueba.swift */; };
 		FE3868E929FDEF960037FB0D /* RutaActivaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3868E829FDEF960037FB0D /* RutaActivaView.swift */; };
@@ -81,6 +82,8 @@
 		58AC680529FDEED6001A1612 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		58AC680929FEBC0A001A1612 /* memberSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memberSignUpView.swift; sourceTree = "<group>"; };
 		58AC680B29FEC62A001A1612 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
+		FE28382729FEC05D001D7F6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FE28382C29FEC8A7001D7F6F /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		FE3868DC29FDAB210037FB0D /* InicioCrewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioCrewView.swift; sourceTree = "<group>"; };
 		FE3868E629FDEBB10037FB0D /* Prueba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prueba.swift; sourceTree = "<group>"; };
 		FE3868E829FDEF960037FB0D /* RutaActivaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaActivaView.swift; sourceTree = "<group>"; };
@@ -92,7 +95,7 @@
 		FE3868F429FDFE620037FB0D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FE3868F629FDFED40037FB0D /* ManagerMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerMainView.swift; sourceTree = "<group>"; };
 		FE3868FA29FE02B40037FB0D /* Screen12View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen12View.swift; sourceTree = "<group>"; };
-		FE3868FC29FE054C0037FB0D /* AvenirNext-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-Regular.ttf"; sourceTree = "<group>"; };
+		FE3868FC29FE054C0037FB0D /* AvenirNext-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AvenirNext-Regular.ttf"; path = "/Users/iOS Lab/Desktop/hackathon/Fuentes/AvenirNext-Regular.ttf"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,8 +158,10 @@
 		58AC67B129FD848C001A1612 /* hackathon */ = {
 			isa = PBXGroup;
 			children = (
+				FE28382729FEC05D001D7F6F /* Info.plist */,
 				58AC67DC29FD8E86001A1612 /* GoogleService-Info.plist */,
 				58AC67B229FD848C001A1612 /* hackathonApp.swift */,
+				FE28382C29FEC8A7001D7F6F /* LaunchScreenView.swift */,
 				FE3868F229FDFDD80037FB0D /* UserProfileView.swift */,
 				FE3868F429FDFE620037FB0D /* SettingsView.swift */,
 				FE3868F629FDFED40037FB0D /* ManagerMainView.swift */,
@@ -174,9 +179,9 @@
 				58AC67F729FD9252001A1612 /* SignUpView.swift */,
 				58AC67FB29FDA21B001A1612 /* MainView.swift */,
 				58AC67FF29FDA55F001A1612 /* LocationManager.swift */,
+				FE3868E829FDEF960037FB0D /* RutaActivaView.swift */,
 				58AC67B629FD848E001A1612 /* Assets.xcassets */,
 				58AC67B829FD848E001A1612 /* Preview Content */,
-				FE3868E829FDEF960037FB0D /* RutaActivaView.swift */,
 			);
 			path = hackathon;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				FE3868FC29FE054C0037FB0D /* AvenirNext-Regular.ttf */,
+				FE28382A29FEC3D1001D7F6F /* against regular.otf */,
 			);
 			path = Fuentes;
 			sourceTree = "<group>";
@@ -290,6 +296,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
@@ -338,6 +347,7 @@
 				58AC67B729FD848E001A1612 /* Assets.xcassets in Resources */,
 				FE3868FD29FE054C0037FB0D /* AvenirNext-Regular.ttf in Resources */,
 				58AC67DD29FD8E86001A1612 /* GoogleService-Info.plist in Resources */,
+				FE28382B29FEC3D1001D7F6F /* against regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +382,7 @@
 				58AC67FA29FD92DB001A1612 /* SignInView.swift in Sources */,
 				FE3868E929FDEF960037FB0D /* RutaActivaView.swift in Sources */,
 				58AC67FC29FDA21B001A1612 /* MainView.swift in Sources */,
+				FE28382D29FEC8A7001D7F6F /* LaunchScreenView.swift in Sources */,
 				FE3868F329FDFDD80037FB0D /* UserProfileView.swift in Sources */,
 				58AC680C29FEC62A001A1612 /* UserAuth.swift in Sources */,
 				FE3868DD29FDAB210037FB0D /* InicioCrewView.swift in Sources */,
@@ -536,11 +547,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"hackathon/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = hackathon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -552,6 +565,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Isaac.hackathon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -565,11 +579,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"hackathon/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = hackathon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -581,6 +597,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Isaac.hackathon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

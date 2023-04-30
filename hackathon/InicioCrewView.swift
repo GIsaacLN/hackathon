@@ -34,32 +34,28 @@ struct InicioCrewView: View {
 
                 Section(){
                         Text("Empresa")
+            }
+            
+            Spacer()
+            
+            Section(){
+                HStack{
+                    Text("¡Bienvenidos!")
+                        .font(.title)
                 }
-                
-                Spacer()
-                
-                Section(){
-                    HStack{
-                        Text("¡Bienvenidos!")
-                            .font(.title)
-                    }
-                Spacer()
-                Spacer()
-                Spacer()
-                Spacer()
-                Text("Resumen del viaje")
-                    HStack{
-                        Spacer()
-                        Image(systemName: "box.truck")
-                            .resizable()
-                            .frame(width:30,height:30)
-                        ProgressView(value:progress)
-                        Image(systemName: "airplane")
-                        
-                    }
-                    
-                }
-                
+            Spacer()
+            Spacer()
+            Spacer()
+            Spacer()
+            Text("Resumen del viaje")
+                HStack{
+                    Spacer()
+                    Image(systemName: "box.truck")
+                        .resizable()
+                        .frame(width:30,height:30)
+                    ProgressView(value:progress)
+                    Image(systemName: "airplane")
+                                    
                 
                 NavigationStack{
                     Text("")
