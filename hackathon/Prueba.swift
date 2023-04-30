@@ -93,24 +93,6 @@ struct Prueba: View {
     }
 }
 
-struct ProgressBar: View {
-    @Binding var value: Double
-
-    var body: some View {
-        GeometryReader { geometry in
-            ZStack(alignment: .leading) {
-                Rectangle()
-                    .opacity(0.3)
-                    .foregroundColor(.blue)
-
-                Rectangle()
-                    .foregroundColor(.blue)
-                    .frame(width: geometry.size.width * CGFloat(value))
-            }
-            .cornerRadius(10)
-        }
-    }
-}
 
 struct Prueba_Previews: PreviewProvider {
     static var previews: some View {

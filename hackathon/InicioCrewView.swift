@@ -9,16 +9,19 @@ import SwiftUI
 import FirebaseAuth //Para Cerrar Sesión
 
 
+private let errores = error(er : "error1", des : "descripcion")
+
+
 struct InicioCrewView: View {
     @EnvironmentObject var userAuth: UserAuth //Para Cerrar Sesión
-    @State private var inicio = false
-    @State private var perfil = false
-    @State private var vehiculo = false
-    @State private var mapa = false
-    @State private var ajustes = false
+    @State public var rut: Bool//ruta
     @State private var progress = 0.8
+
+    
     
     var body: some View {
+        
+        NavigationView{
             VStack {
                 
                 //        Button(action: signOut) { //Para Cerrar Sesión
@@ -47,45 +50,74 @@ struct InicioCrewView: View {
                     Spacer()
                     Spacer()
                     
-                    NavigationView {
-                        NavigationLink(destination: RouteDetailView(routeName: "ruta")){
-                            Text("Resumen del viaje")
-                                .font(.title2)
-                                .fontWeight(.semibold)
-                                .multilineTextAlignment(.center)
-                                .lineLimit(1)
-                                .padding(.all)
-                        }
-                }
-                HStack{
-                    Spacer()
-                    Image(systemName: "box.truck")
-                        .resizable()
-                        .frame(width:30,height:30)
-                    ProgressView(value:progress)
-                    Image(systemName: "airplane")
-                }
+                    NavigationLink(destination: RouteDetailView(routeName: "sadasdasd")){
+                        Text("resumen")
+                    }
+                    
                 
-                    Spacer(minLength: 30)
+                
+                    
+
+                    
+                    HStack{
+                        
+                        Image(systemName: "box.truck")
+                            .resizable()
+                            .frame(width:60,height:50)
+                            .padding()
+                        
+                        ProgressBar(value: $progress)
+                            .frame(height: 20)
+                            .padding()
+                        
+                        Image(systemName: "mappin.and.ellipse")
+                            .resizable()
+                            .frame(width:60,height:60)
+                            .padding()
+                        
+                    }
+                    .padding(.bottom)
+                    .frame(height: 300)
+                    
+                    
+                    // Aquí puedes agregar los elementos para mostrar los hazards y warnings
+                    ForEach([errores]) { error in
+                        HStack{
+                            Text(error.er)
+                        }
+                    }
+                    .padding(.top)
                     
                 }
+            }
+            
         }
-        
     }
 }
 
-    //  func signOut() {
-    //      do {
-    //          try Auth.auth().signOut()
-    //          userAuth.isSignedIn = false
-    //      } catch let signOutError as NSError {
-    //          print("Error al cerrar sesión: %@", signOutError)
-    //      }
-    //  }
 
+
+struct ProgressBar: View {
+    @Binding var value: Double
+
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack(alignment: .leading) {
+                Rectangle()
+                    .opacity(0.3)
+                    .foregroundColor(.blue)
+
+                Rectangle()
+                    .foregroundColor(.blue)
+                    .frame(width: geometry.size.width * CGFloat(value))
+            }
+            .cornerRadius(10)
+        }
+    }
+}
 
 struct InicioCrewView_Previews: PreviewProvider {
     static var previews: some View {
-        InicioCrewView()
+        InicioCrewView(rut: false)
     }
 }
