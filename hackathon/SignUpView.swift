@@ -4,9 +4,17 @@
 //
 //  Created by Raymundo Mondragón Lara on 29/04/23.
 //
-
+import Foundation
 import SwiftUI
 import FirebaseAuth
+
+struct NewUser: Codable {
+    let nombre: String
+    let apellidos: String
+    let correo: String
+    let numeroDeTelefono: String
+    let esTransportista: Bool
+}
 
 struct SignUpView: View {
     @State private var email: String = ""
@@ -14,6 +22,8 @@ struct SignUpView: View {
     @State private var name: String = ""
     @State private var lastname: String = ""
     @State private var number: String = ""
+    @State private var rfc: String = ""
+    @State private var id: String = ""
 
     @State private var errorMessage: String = ""
 
@@ -67,9 +77,37 @@ struct SignUpView: View {
             if let error = error {
                 errorMessage = error.localizedDescription
             } else {
-                SignInView()
+                createNewUser()
             }
         }
+    }
+
+    func createNewUser() {
+        guard let url = URL(string: "http://localhost:5000/usuarios") else {
+            print("Invalid URL")
+            return
+        }
+
+        let newUser = NewUser(nombre: name, apellidos: lastname, correo: email, numeroDeTelefono: number, esTransportista: false)
+        guard let encodedUser = try? JSONEncoder().encode(newUser) else {
+            print("Failed to encode user")
+            return
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = encodedUser
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let _ = data, error == nil else {
+                print("Error al crear el usuario: \(error?.localizedDescription ?? "Error desconocido")")
+                return
+            }
+            DispatchQueue.main.async {
+                SignInView()
+            }
+        }.resume()
     }
 }
 
