@@ -26,7 +26,11 @@ struct hackathonApp: App {
         WindowGroup {
             Group {
                 if Auth.auth().currentUser != nil {
-                    InicioCrewView()
+                    if userAuth.isTransportista {
+                        InicioCrewView()
+                    } else {
+                        ManagerMainView()
+                    }
                 } else {
                     SignInView().environmentObject(userAuth)
                 }
