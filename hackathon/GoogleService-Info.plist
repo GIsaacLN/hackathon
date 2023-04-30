@@ -3,32 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1018395248705-qlq326h1al0n03de6gproblkrsfiq6n3.apps.googleusercontent.com</string>
+	<string>1093666615458-94a6gog7kbqve8jodfta5sk7fkibaovp.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1018395248705-qlq326h1al0n03de6gproblkrsfiq6n3</string>
+	<string>com.googleusercontent.apps.1093666615458-94a6gog7kbqve8jodfta5sk7fkibaovp</string>
 	<key>API_KEY</key>
-	<string>AIzaSyC2gHMbg_pUmHv-_GLkcfetfUq1y7cPUqU</string>
+	<string>AIzaSyATxQu4dR54mjidav-7FxJ5doqHgVWcnWk</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1018395248705</string>
+	<string>1093666615458</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>mx.edu.up.ioslab.AppNotas.0217305</string>
+	<string>Isaac.hackathon</string>
 	<key>PROJECT_ID</key>
-	<string>notas-e6d63</string>
+	<string>hackathon-48bc5</string>
 	<key>STORAGE_BUCKET</key>
-	<string>notas-e6d63.appspot.com</string>
+	<string>hackathon-48bc5.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1018395248705:ios:b647de65d716eca57b5ec0</string>
+	<string>1:1093666615458:ios:93918d9700d3dfb78e27fb</string>
 </dict>
 </plist>
