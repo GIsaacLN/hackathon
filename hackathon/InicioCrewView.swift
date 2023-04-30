@@ -15,14 +15,13 @@ struct InicioCrewView: View {
     @State private var mapa = false
     @State private var ajustes = false
     @State private var progress = 0.8
-    let costumFont = Font.custom("against_regular", size: 30)
     
     var body: some View {
         VStack{
             
             Section(){
                     Text("Empresa")
-                    .font(costumFont)
+                    .font(Font.custom("against-Regular", size: 30))
             }
             
             Spacer()
