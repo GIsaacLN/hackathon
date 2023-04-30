@@ -15,14 +15,14 @@ struct InicioCrewView: View {
     @State private var mapa = false
     @State private var ajustes = false
     @State private var progress = 0.8
-
+    let costumFont = Font.custom("against_regular", size: 30)
     
     var body: some View {
         VStack{
             
             Section(){
                     Text("Empresa")
-                    .font(Font.custom("against regular", size: 30))
+                    .font(costumFont)
             }
             
             Spacer()
@@ -30,7 +30,7 @@ struct InicioCrewView: View {
             Section(){
                 HStack{
                     Text("¡Bienvenidos!")
-                        .font(.system(size: 36))
+                        .font(.title)
                 }
             Spacer()
             Spacer()
