@@ -30,9 +30,6 @@ struct ManagerMainView: View {
             }
             
             Spacer()
-            
-            ManagerToolbar(selectedTab: $selectedTab)
-                .padding(.bottom)
         }
     }
 }
@@ -55,34 +52,6 @@ struct SectionSummaryView: View {
     }
 }
 
-struct ManagerToolbar: View {
-    @Binding var selectedTab: Int
-    
-    var body: some View {
-        HStack {
-            Button(action: {
-                selectedTab = 0
-            }) {
-                Image(systemName: selectedTab == 0 ? "person.fill" : "person")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 30, height: 30)
-            }
-            
-            Spacer()
-            
-            Button(action: {
-                selectedTab = 1
-            }) {
-                Image(systemName: selectedTab == 1 ? "gearshape.fill" : "gearshape")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 30, height: 30)
-            }
-        }
-        .padding(.horizontal)
-    }
-}
 
 struct ManagerMainView_Previews: PreviewProvider {
     static var previews: some View {

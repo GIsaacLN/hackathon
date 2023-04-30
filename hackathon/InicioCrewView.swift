@@ -19,7 +19,7 @@ struct InicioCrewView: View {
     var body: some View {
         
         NavigationView{
-            VStack {
+            VStack (alignment: .center, spacing: 5.0) {
                 
                 //        Button(action: signOut) { //Para Cerrar Sesión
                 //            Text("Cerrar sesión")
@@ -33,7 +33,7 @@ struct InicioCrewView: View {
                 
                 Text("Empresa")
                     .font(.title)
-                
+    
                 
                 Text("¡Bienvenidos!")
                     .font(.title)
@@ -72,7 +72,8 @@ struct InicioCrewView: View {
                     }
                 }
             }
-            .padding(.top)
+            .padding(.bottom)
+            
         }
     }
             
