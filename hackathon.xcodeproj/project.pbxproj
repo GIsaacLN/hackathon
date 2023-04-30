@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		58AC67B329FD848C001A1612 /* hackathonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC67B229FD848C001A1612 /* hackathonApp.swift */; };
-		58AC67B529FD848C001A1612 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC67B429FD848C001A1612 /* ContentView.swift */; };
 		58AC67B729FD848E001A1612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58AC67B629FD848E001A1612 /* Assets.xcassets */; };
 		58AC67BA29FD848E001A1612 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58AC67B929FD848E001A1612 /* Preview Assets.xcassets */; };
 		58AC67C429FD848E001A1612 /* hackathonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC67C329FD848E001A1612 /* hackathonTests.swift */; };
@@ -31,7 +30,8 @@
 		58AC67FC29FDA21B001A1612 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC67FB29FDA21B001A1612 /* MainView.swift */; };
 		58AC680029FDA55F001A1612 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC67FF29FDA55F001A1612 /* LocationManager.swift */; };
 		58AC680629FDEED6001A1612 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC680529FDEED6001A1612 /* UserListView.swift */; };
-		FE28382B29FEC3D1001D7F6F /* against regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE28382A29FEC3D1001D7F6F /* against regular.otf */; };
+		58AC680A29FEBC0A001A1612 /* memberSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC680929FEBC0A001A1612 /* memberSignUpView.swift */; };
+		58AC680C29FEC62A001A1612 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC680B29FEC62A001A1612 /* UserAuth.swift */; };
 		FE28382D29FEC8A7001D7F6F /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE28382C29FEC8A7001D7F6F /* LaunchScreenView.swift */; };
 		FE3868DD29FDAB210037FB0D /* InicioCrewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3868DC29FDAB210037FB0D /* InicioCrewView.swift */; };
 		FE3868E729FDEBB10037FB0D /* Prueba.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3868E629FDEBB10037FB0D /* Prueba.swift */; };
@@ -67,7 +67,6 @@
 /* Begin PBXFileReference section */
 		58AC67AF29FD848C001A1612 /* hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58AC67B229FD848C001A1612 /* hackathonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackathonApp.swift; sourceTree = "<group>"; };
-		58AC67B429FD848C001A1612 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		58AC67B629FD848E001A1612 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58AC67B929FD848E001A1612 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		58AC67BF29FD848E001A1612 /* hackathonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hackathonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,8 +80,9 @@
 		58AC67FB29FDA21B001A1612 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		58AC67FF29FDA55F001A1612 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		58AC680529FDEED6001A1612 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		58AC680929FEBC0A001A1612 /* memberSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memberSignUpView.swift; sourceTree = "<group>"; };
+		58AC680B29FEC62A001A1612 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 		FE28382729FEC05D001D7F6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		FE28382A29FEC3D1001D7F6F /* against regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "against regular.otf"; sourceTree = "<group>"; };
 		FE28382C29FEC8A7001D7F6F /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		FE3868DC29FDAB210037FB0D /* InicioCrewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioCrewView.swift; sourceTree = "<group>"; };
 		FE3868E629FDEBB10037FB0D /* Prueba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prueba.swift; sourceTree = "<group>"; };
@@ -166,6 +166,7 @@
 				FE3868F429FDFE620037FB0D /* SettingsView.swift */,
 				FE3868F629FDFED40037FB0D /* ManagerMainView.swift */,
 				FE3868DC29FDAB210037FB0D /* InicioCrewView.swift */,
+				58AC680B29FEC62A001A1612 /* UserAuth.swift */,
 				FE3868EE29FDFD350037FB0D /* HomeView.swift */,
 				FE3868FA29FE02B40037FB0D /* Screen12View.swift */,
 				FE3868F029FDFD7F0037FB0D /* RouteDetailView.swift */,
@@ -174,7 +175,7 @@
 				FE3868EA29FDEFFA0037FB0D /* TripStatusView.swift */,
 				58AC680529FDEED6001A1612 /* UserListView.swift */,
 				58AC67F929FD92DB001A1612 /* SignInView.swift */,
-				58AC67B429FD848C001A1612 /* ContentView.swift */,
+				58AC680929FEBC0A001A1612 /* memberSignUpView.swift */,
 				58AC67F729FD9252001A1612 /* SignUpView.swift */,
 				58AC67FB29FDA21B001A1612 /* MainView.swift */,
 				58AC67FF29FDA55F001A1612 /* LocationManager.swift */,
@@ -373,9 +374,9 @@
 			files = (
 				FE3868F529FDFE620037FB0D /* SettingsView.swift in Sources */,
 				FE3868FB29FE02B40037FB0D /* Screen12View.swift in Sources */,
-				58AC67B529FD848C001A1612 /* ContentView.swift in Sources */,
 				58AC680629FDEED6001A1612 /* UserListView.swift in Sources */,
 				58AC67F829FD9252001A1612 /* SignUpView.swift in Sources */,
+				58AC680A29FEBC0A001A1612 /* memberSignUpView.swift in Sources */,
 				58AC680029FDA55F001A1612 /* LocationManager.swift in Sources */,
 				FE3868ED29FDF0450037FB0D /* VehicleView.swift in Sources */,
 				58AC67FA29FD92DB001A1612 /* SignInView.swift in Sources */,
@@ -383,6 +384,7 @@
 				58AC67FC29FDA21B001A1612 /* MainView.swift in Sources */,
 				FE28382D29FEC8A7001D7F6F /* LaunchScreenView.swift in Sources */,
 				FE3868F329FDFDD80037FB0D /* UserProfileView.swift in Sources */,
+				58AC680C29FEC62A001A1612 /* UserAuth.swift in Sources */,
 				FE3868DD29FDAB210037FB0D /* InicioCrewView.swift in Sources */,
 				FE3868EB29FDEFFA0037FB0D /* TripStatusView.swift in Sources */,
 				FE3868F729FDFED40037FB0D /* ManagerMainView.swift in Sources */,

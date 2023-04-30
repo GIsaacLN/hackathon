@@ -12,42 +12,51 @@ struct SignInView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var errorMessage: String = ""
-    @State private var isSignedIn = false
+    @EnvironmentObject var userAuth: UserAuth //Permite verificar que el usuario inicio sesion aneriormente
 
     var body: some View {
-        VStack {
-            NavigationLink(destination: MainView(), isActive: $isSignedIn) {
-                EmptyView()
-            }
-            TextField("Email", text: $email)
-                .keyboardType(.emailAddress)
-                .autocapitalization(.none)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(8)
-
-            SecureField("Password", text: $password)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(8)
-
-            Button(action: signIn) {
-                Text("Sign In")
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity)
+        NavigationView {
+            VStack {
+                TextField("Email", text: $email)
+                    .keyboardType(.emailAddress)
+                    .autocapitalization(.none)
                     .padding()
-                    .background(Color.blue)
+                    .background(Color.gray.opacity(0.2))
                     .cornerRadius(8)
+                
+                SecureField("Contraseña", text: $password)
+                    .padding()
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(8)
+                
+                Button(action: signIn) {
+                    Text("Inicia sesión")
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(8)
                 }
-            .padding(.top)
-
-            if !errorMessage.isEmpty {
-                Text(errorMessage)
-                    .foregroundColor(.red)
-                    .padding(.top)
+                .padding()
+                
+                NavigationLink(destination: memberSignUpView()) {
+                    Text("Registrate")
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(8)
+                }
+                .padding()
+                
+                if !errorMessage.isEmpty {
+                    Text(errorMessage)
+                        .foregroundColor(.red)
+                        .padding(.top)
+                }
             }
+            .padding()
         }
-        .padding()
     }
 
     func signIn() {
@@ -55,10 +64,11 @@ struct SignInView: View {
             if let error = error {
                 errorMessage = error.localizedDescription
             } else {
-                isSignedIn = true
+                userAuth.isSignedIn = true
             }
         }
     }
+
 }
 
                               
