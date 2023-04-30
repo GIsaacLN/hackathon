@@ -25,25 +25,11 @@ struct hackathonApp: App {
     @State private var isTransportista: Bool? = nil
 
     var body: some Scene {
+        
         WindowGroup {
             Group {
                 if Auth.auth().currentUser != nil {
-                    if let isTransportista = isTransportista {
-                        if isTransportista {
-                            ManagerMainView()
-                                .environmentObject(userAuth)
-                        } else {
-                            InicioCrewView()
-                                .environmentObject(userAuth)
-                        }
-                    } else {
-                        ProgressView()
-                            .onAppear {
-                                getUserIsTransportista { result in
-                                    isTransportista = result
-                                }
-                            }
-                    }
+                    TAbBarView()
                 } else {
                     SignInView().environmentObject(userAuth)
                 }

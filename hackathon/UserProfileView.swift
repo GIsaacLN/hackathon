@@ -11,36 +11,44 @@ struct UserProfileView: View {
     @State private var userData: String = "Datos del usuario"
     
     var body: some View {
-        VStack {
-            Text("Perfil")
-                .font(.largeTitle)
-                .bold()
+        NavigationView{
             
             VStack {
-                Text("Viajes")
-                    .font(.title2)
+                Text("Perfil")
+                    .font(.largeTitle)
+                    .bold()
                 
-                List(userTrips, id: \.self) { trip in
-                    NavigationLink(destination: RouteDetailView(routeName: trip)) {
-                        Text(trip)
+                VStack {
+                    Image(systemName: "person.circle.fill")
+                        .resizable()
+                        .frame(width: 100,height: 100)
+                        .shadow(color: Color.gray, radius: 5, x: 5,y: 5)
+                    
+                    Text("Viajes")
+                        .font(.title2)
+                    
+                    List(userTrips, id: \.self) { trip in
+                        NavigationLink(destination: RouteDetailView(routeName: trip)) {
+                            Text(trip)
+                        }
                     }
                 }
-            }
-            .padding(.top)
-            
-            VStack {
-                Text("Datos del usuario")
-                    .font(.title2)
+                .padding(.top)
                 
-                Text(userData)
+                VStack {
+                    Text("Datos del usuario")
+                        .font(.title2)
+                    
+                    Text(userData)
+                }
+                .padding(.top)
+                
+                Spacer()
+                
             }
             .padding(.top)
-            
-            Spacer()
-            
         }
-        .padding(.top)
-        .navigationBarTitle("", displayMode: .inline)
+        .navigationBarTitle("Perfil", displayMode: .inline)
     }
 }
 

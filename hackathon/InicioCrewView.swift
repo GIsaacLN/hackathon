@@ -24,7 +24,7 @@ struct InicioCrewView: View {
     var body: some View {
         
         NavigationView{
-            VStack {
+            VStack (alignment: .center, spacing: 5.0) {
                 
                 Button(action: userAuth.signOut) {
                     Text("Cerrar sesión")
@@ -35,57 +35,54 @@ struct InicioCrewView: View {
                 }
                 .padding(.top)
                 
-                Section(){
-                    Text("Empresa")
-                        .font(.title)
+                
+                Text("Empresa")
+                    .font(.title)
+    
+                
+                Text("¡Bienvenidos!")
+                    .font(.title)
+                
+                
+                
+                NavigationLink(destination: RouteDetailView(routeName: "sadasdasd")){
+                    Text("Resumen")
+                        .foregroundColor(.black)
                 }
                 
-                Spacer()
-                
-                Section(){
-                    HStack{
-                        Text("¡Bienvenidos!")
-                            .font(.title)
-                    }
+                HStack{
+                    
+                    Image(systemName: "box.truck")
+                        .resizable()
+                        .frame(width:60,height:50)
+                        .padding()
+                    
+                    ProgressBar(value: $progress)
+                        .frame(height: 20)
+                        .padding()
+                    
+                    Image(systemName: "mappin.and.ellipse")
+                        .resizable()
+                        .frame(width:60,height:60)
+                        .padding()
+                    
                 }
-                    NavigationLink(destination: RouteDetailView(routeName: "sadasdasd")){
-                        Text("resumen")
-                    }
-                    
+                .padding(.bottom)
+                
+                
+                // Aquí puedes agregar los elementos para mostrar los hazards y warnings
+                ForEach([errores]) { error in
                     HStack{
-                        
-                        Image(systemName: "box.truck")
-                            .resizable()
-                            .frame(width:60,height:50)
-                            .padding()
-                        
-                        ProgressBar(value: $progress)
-                            .frame(height: 20)
-                            .padding()
-                        
-                        Image(systemName: "mappin.and.ellipse")
-                            .resizable()
-                            .frame(width:60,height:60)
-                            .padding()
-                        
+                        Text(error.er)
                     }
-                    .padding(.bottom)
-                    .frame(height: 300)
-                    
-                    
-                    // Aquí puedes agregar los elementos para mostrar los hazards y warnings
-                    ForEach([errores]) { error in
-                        HStack{
-                            Text(error.er)
-                        }
-                    }
-                    .padding(.top)
-                    
                 }
             }
+            .padding(.bottom)
             
         }
     }
+            
+}
 
 
 
