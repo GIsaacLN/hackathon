@@ -17,7 +17,7 @@ struct ManagerMainView: View {
             Text("Empresa")
                 .font(.largeTitle)
                 .padding()
-            SearchBar(text: $searchText, placeholder: "...")
+            SearchBar(text: $searchText, placeholder: "")
                 .padding(.horizontal)
             
             ScrollView(.horizontal, showsIndicators: false) {
