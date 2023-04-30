@@ -19,7 +19,6 @@ struct InicioCrewView: View {
     @State private var progress = 0.8
     
     var body: some View {
-        NavigationView {
             VStack {
                 
                 //        Button(action: signOut) { //Para Cerrar Sesión
@@ -47,70 +46,31 @@ struct InicioCrewView: View {
                     Spacer()
                     Spacer()
                     Spacer()
-                    Text("Resumen del viaje")
-                    HStack{
-                        Spacer()
-                        Image(systemName: "box.truck")
-                            .resizable()
-                            .frame(width:30,height:30)
-                        ProgressView(value:progress)
-                        Image(systemName: "airplane")
-                        
-                        
-                        NavigationStack{
-                            Text("")
-                                .toolbar {
-                                    ToolbarItemGroup(placement: .bottomBar) {
-                                        Button(action:  {
-                                            print("Pressed")
-                                        }) {
-                                            Image(systemName: "person.circle.fill")
-                                                .foregroundColor(.black)
-                                        }
-                                        
-                                        Spacer()
-                                        
-                                        Button(action:  {
-                                            print("Pressed")
-                                        }) {
-                                            Image(systemName: "car.fill")
-                                                .foregroundColor(.black)
-                                        }
-                                        
-                                        Spacer()
-                                        
-                                        Button(action:  {
-                                            print("Pressed")
-                                        }) {
-                                            Image(systemName: "house")
-                                                .resizable()
-                                                .foregroundColor(.black)
-                                                .frame(width: 50, height: 40)
-                                        }
-                                        Spacer()
-                                        
-                                        Button(action:  {
-                                            print("Pressed")
-                                        }) {
-                                            Image(systemName: "map.fill")
-                                                .foregroundColor(.black)
-                                        }
-                                        
-                                        Spacer()
-                                        
-                                        Button(action: {
-                                            print("Pressed")
-                                        }) {
-                                            Image(systemName: "gear")
-                                                .foregroundColor(.black)
-                                        }
-                                    }
-                                }
+                    
+                    NavigationView {
+                        NavigationLink(destination: RouteDetailView(routeName: "ruta")){
+                            Text("Resumen del viaje")
+                                .font(.title2)
+                                .fontWeight(.semibold)
+                                .multilineTextAlignment(.center)
+                                .lineLimit(1)
+                                .padding(.all)
                         }
-                    }
                 }
-            }
+                HStack{
+                    Spacer()
+                    Image(systemName: "box.truck")
+                        .resizable()
+                        .frame(width:30,height:30)
+                    ProgressView(value:progress)
+                    Image(systemName: "airplane")
+                }
+                
+                    Spacer(minLength: 30)
+                    
+                }
         }
+        
     }
 }
 
