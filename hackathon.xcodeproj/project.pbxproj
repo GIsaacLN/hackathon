@@ -31,7 +31,7 @@
 		58AC680029FDA55F001A1612 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC67FF29FDA55F001A1612 /* LocationManager.swift */; };
 		58AC680629FDEED6001A1612 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC680529FDEED6001A1612 /* UserListView.swift */; };
 		58AC680A29FEBC0A001A1612 /* memberSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC680929FEBC0A001A1612 /* memberSignUpView.swift */; };
-		58AC680C29FEC62A001A1612 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC680B29FEC62A001A1612 /* UserAuth.swift */; };
+		58AC680E29FECE8F001A1612 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC680D29FECE8F001A1612 /* UserAuth.swift */; };
 		FE28382D29FEC8A7001D7F6F /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE28382C29FEC8A7001D7F6F /* LaunchScreenView.swift */; };
 		FE3868DD29FDAB210037FB0D /* InicioCrewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3868DC29FDAB210037FB0D /* InicioCrewView.swift */; };
 		FE3868E729FDEBB10037FB0D /* Prueba.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3868E629FDEBB10037FB0D /* Prueba.swift */; };
@@ -81,7 +81,7 @@
 		58AC67FF29FDA55F001A1612 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		58AC680529FDEED6001A1612 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		58AC680929FEBC0A001A1612 /* memberSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memberSignUpView.swift; sourceTree = "<group>"; };
-		58AC680B29FEC62A001A1612 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
+		58AC680D29FECE8F001A1612 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 		FE28382729FEC05D001D7F6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FE28382C29FEC8A7001D7F6F /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		FE3868DC29FDAB210037FB0D /* InicioCrewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioCrewView.swift; sourceTree = "<group>"; };
@@ -137,6 +137,7 @@
 		58AC67A629FD848C001A1612 = {
 			isa = PBXGroup;
 			children = (
+				58AC680D29FECE8F001A1612 /* UserAuth.swift */,
 				FE3868DE29FDE0A00037FB0D /* Fuentes */,
 				58AC67B129FD848C001A1612 /* hackathon */,
 				58AC67C229FD848E001A1612 /* hackathonTests */,
@@ -166,7 +167,6 @@
 				FE3868F429FDFE620037FB0D /* SettingsView.swift */,
 				FE3868F629FDFED40037FB0D /* ManagerMainView.swift */,
 				FE3868DC29FDAB210037FB0D /* InicioCrewView.swift */,
-				58AC680B29FEC62A001A1612 /* UserAuth.swift */,
 				FE3868EE29FDFD350037FB0D /* HomeView.swift */,
 				FE3868FA29FE02B40037FB0D /* Screen12View.swift */,
 				FE3868F029FDFD7F0037FB0D /* RouteDetailView.swift */,
@@ -215,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				FE3868FC29FE054C0037FB0D /* AvenirNext-Regular.ttf */,
-				FE28382A29FEC3D1001D7F6F /* against regular.otf */,
 			);
 			path = Fuentes;
 			sourceTree = "<group>";
@@ -347,7 +346,6 @@
 				58AC67B729FD848E001A1612 /* Assets.xcassets in Resources */,
 				FE3868FD29FE054C0037FB0D /* AvenirNext-Regular.ttf in Resources */,
 				58AC67DD29FD8E86001A1612 /* GoogleService-Info.plist in Resources */,
-				FE28382B29FEC3D1001D7F6F /* against regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,9 +380,9 @@
 				58AC67FA29FD92DB001A1612 /* SignInView.swift in Sources */,
 				FE3868E929FDEF960037FB0D /* RutaActivaView.swift in Sources */,
 				58AC67FC29FDA21B001A1612 /* MainView.swift in Sources */,
+				58AC680E29FECE8F001A1612 /* UserAuth.swift in Sources */,
 				FE28382D29FEC8A7001D7F6F /* LaunchScreenView.swift in Sources */,
 				FE3868F329FDFDD80037FB0D /* UserProfileView.swift in Sources */,
-				58AC680C29FEC62A001A1612 /* UserAuth.swift in Sources */,
 				FE3868DD29FDAB210037FB0D /* InicioCrewView.swift in Sources */,
 				FE3868EB29FDEFFA0037FB0D /* TripStatusView.swift in Sources */,
 				FE3868F729FDFED40037FB0D /* ManagerMainView.swift in Sources */,
