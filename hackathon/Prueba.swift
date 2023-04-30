@@ -6,6 +6,26 @@
 //
 
 import SwiftUI
+import Foundation
+
+struct vista: Identifiable{
+    var id: Int
+    var logo: Image
+}
+
+struct error: Identifiable{
+    var id = UUID()
+    var er : String
+    var des : String
+}
+
+private let errores = error(er : "error1", des : "descripcion")
+
+private let vistas = [vista(id: 1, logo: Image(systemName: "person.circle.fill")),
+            vista(id: 2, logo: Image(systemName: "person.circle.fill")),
+            vista(id: 3, logo: Image(systemName: "person.circle.fill")),
+            vista(id: 4, logo: Image(systemName: "person.circle.fill")),
+            vista(id: 5, logo: Image(systemName: "person.circle.fill"))]
 
 struct Prueba: View {
     @State private var progress: Double = 0.46
@@ -38,23 +58,23 @@ struct Prueba: View {
                 
             }
 
-            VStack {
                 // Aquí puedes agregar los elementos para mostrar los hazards y warnings
-                NavigationView(){
-                    
+                ForEach([errores]) { error in
+                        HStack{
+                            Text(error.er)
+                    }
                 }
-            }
             .padding(.top)
 
             Spacer()
 
             HStack {
-                ForEach(0..<5) { index in
+                ForEach(vistas) { vista in
                     Button(action: {
                         // Acción para cada botón
                     }) {
                         // Contenido visual para cada botón
-                        Image(systemName: "shield.lefthalf.filled")
+                        vista.logo
                     }
                     .padding()
                 }
