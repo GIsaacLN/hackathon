@@ -23,7 +23,9 @@ struct hackathonApp: App {
     @StateObject var userAuth = UserAuth()
 
     var body: some Scene {
+        
         WindowGroup {
+            TAbBarView()
             Group {
                 if Auth.auth().currentUser != nil {
                     InicioCrewView()

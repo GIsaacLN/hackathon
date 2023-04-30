@@ -37,20 +37,7 @@ struct TripStatusView: View {
                 .padding()
                 .frame(height: 150)
                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray))
-            
             Spacer()
-            
-            HStack {
-                ForEach(0..<5) { index in
-                    Button(action: {
-                        // Acción para cada botón
-                    }) {
-                        // Contenido visual para cada botón
-                        Image(systemName: "circle.fill")
-                    }
-                    .padding()
-                }
-            }
         }
         .padding(.top)
     }
