@@ -13,7 +13,6 @@
 		58AC67C429FD848E001A1612 /* hackathonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC67C329FD848E001A1612 /* hackathonTests.swift */; };
 		58AC67CE29FD848E001A1612 /* hackathonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC67CD29FD848E001A1612 /* hackathonUITests.swift */; };
 		58AC67D029FD848E001A1612 /* hackathonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC67CF29FD848E001A1612 /* hackathonUITestsLaunchTests.swift */; };
-		58AC67DD29FD8E86001A1612 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58AC67DC29FD8E86001A1612 /* GoogleService-Info.plist */; };
 		58AC67E029FD90D8001A1612 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 58AC67DF29FD90D8001A1612 /* FirebaseAnalytics */; };
 		58AC67E229FD90D8001A1612 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 58AC67E129FD90D8001A1612 /* FirebaseAnalyticsSwift */; };
 		58AC67E429FD90D8001A1612 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 58AC67E329FD90D8001A1612 /* FirebaseAuth */; };
@@ -45,6 +44,7 @@
 		FE3868F729FDFED40037FB0D /* ManagerMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3868F629FDFED40037FB0D /* ManagerMainView.swift */; };
 		FE3868FB29FE02B40037FB0D /* Screen12View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3868FA29FE02B40037FB0D /* Screen12View.swift */; };
 		FE3868FD29FE054C0037FB0D /* AvenirNext-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE3868FC29FE054C0037FB0D /* AvenirNext-Regular.ttf */; };
+		FEDA9B0629FEDB7D008C18CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEDA9B0529FEDB7D008C18CC /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +74,6 @@
 		58AC67C929FD848E001A1612 /* hackathonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hackathonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58AC67CD29FD848E001A1612 /* hackathonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackathonUITests.swift; sourceTree = "<group>"; };
 		58AC67CF29FD848E001A1612 /* hackathonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackathonUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		58AC67DC29FD8E86001A1612 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		58AC67F729FD9252001A1612 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		58AC67F929FD92DB001A1612 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		58AC67FB29FDA21B001A1612 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -95,6 +94,7 @@
 		FE3868F629FDFED40037FB0D /* ManagerMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerMainView.swift; sourceTree = "<group>"; };
 		FE3868FA29FE02B40037FB0D /* Screen12View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen12View.swift; sourceTree = "<group>"; };
 		FE3868FC29FE054C0037FB0D /* AvenirNext-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AvenirNext-Regular.ttf"; path = "/Users/iOS Lab/Desktop/hackathon/Fuentes/AvenirNext-Regular.ttf"; sourceTree = "<absolute>"; };
+		FEDA9B0529FEDB7D008C18CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +142,7 @@
 				58AC67C229FD848E001A1612 /* hackathonTests */,
 				58AC67CC29FD848E001A1612 /* hackathonUITests */,
 				58AC67B029FD848C001A1612 /* Products */,
+				FEF3B3D929FED60D00C95935 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,7 +159,7 @@
 		58AC67B129FD848C001A1612 /* hackathon */ = {
 			isa = PBXGroup;
 			children = (
-				58AC67DC29FD8E86001A1612 /* GoogleService-Info.plist */,
+				FEDA9B0529FEDB7D008C18CC /* GoogleService-Info.plist */,
 				58AC67B229FD848C001A1612 /* hackathonApp.swift */,
 				FE28382C29FEC8A7001D7F6F /* LaunchScreenView.swift */,
 				FE3868F229FDFDD80037FB0D /* UserProfileView.swift */,
@@ -215,6 +216,13 @@
 				FE3868FC29FE054C0037FB0D /* AvenirNext-Regular.ttf */,
 			);
 			path = Fuentes;
+			sourceTree = "<group>";
+		};
+		FEF3B3D929FED60D00C95935 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,8 +350,8 @@
 			files = (
 				58AC67BA29FD848E001A1612 /* Preview Assets.xcassets in Resources */,
 				58AC67B729FD848E001A1612 /* Assets.xcassets in Resources */,
+				FEDA9B0629FEDB7D008C18CC /* GoogleService-Info.plist in Resources */,
 				FE3868FD29FE054C0037FB0D /* AvenirNext-Regular.ttf in Resources */,
-				58AC67DD29FD8E86001A1612 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +466,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -518,6 +527,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -547,9 +557,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"hackathon/Preview Content\"";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
+				ENABLE_ON_DEMAND_RESOURCES = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = hackathon/Info.plist;
+				INFOPLIST_FILE = "hackathon/GoogleService-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -579,9 +591,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"hackathon/Preview Content\"";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
+				ENABLE_ON_DEMAND_RESOURCES = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = hackathon/Info.plist;
+				INFOPLIST_FILE = "hackathon/GoogleService-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
