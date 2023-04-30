@@ -10,7 +10,7 @@ import FirebaseAuth //Para Cerrar Sesión
 
 
 struct InicioCrewView: View {
-    @EnvironmentObject var userAuth: UserAuth //Para Cerrar Sesión
+    @EnvironmentObject var userAuth: UserAuth
     @State private var inicio = false
     @State private var perfil = false
     @State private var vehiculo = false
@@ -22,15 +22,15 @@ struct InicioCrewView: View {
         NavigationView {
             VStack {
                 
-                //        Button(action: signOut) { //Para Cerrar Sesión
-                //            Text("Cerrar sesión")
-                //                .foregroundColor(.white)
-                //                .padding()
-                //                .background(Color.red)
-                //                .cornerRadius(8)
-                //                  }
-                //        .padding(.top)
-                
+                Button(action: userAuth.signOut) {
+                    Text("Cerrar sesión")
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.red)
+                        .cornerRadius(8)
+                }
+                .padding(.top)
+
                 
                 Section(){
                     Text("Empresa")
@@ -113,15 +113,6 @@ struct InicioCrewView: View {
         }
     }
 }
-
-    //  func signOut() {
-    //      do {
-    //          try Auth.auth().signOut()
-    //          userAuth.isSignedIn = false
-    //      } catch let signOutError as NSError {
-    //          print("Error al cerrar sesión: %@", signOutError)
-    //      }
-    //  }
 
 
 struct InicioCrewView_Previews: PreviewProvider {
