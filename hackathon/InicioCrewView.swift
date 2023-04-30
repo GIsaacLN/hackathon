@@ -14,11 +14,8 @@ private let errores = error(er : "error1", des : "descripcion")
 
 struct InicioCrewView: View {
     @EnvironmentObject var userAuth: UserAuth //Para Cerrar Sesión
-    @State public var rut: Bool//ruta
     @State private var progress = 0.8
 
-    
-    
     var body: some View {
         
         NavigationView{
@@ -33,9 +30,9 @@ struct InicioCrewView: View {
                 //                  }
                 //        .padding(.top)
                 
-                
                 Section(){
                     Text("Empresa")
+                        .font(.title)
                 }
                 
                 Spacer()
@@ -45,19 +42,10 @@ struct InicioCrewView: View {
                         Text("¡Bienvenidos!")
                             .font(.title)
                     }
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    
+                }
                     NavigationLink(destination: RouteDetailView(routeName: "sadasdasd")){
                         Text("resumen")
                     }
-                    
-                
-                
-                    
-
                     
                     HStack{
                         
@@ -93,7 +81,7 @@ struct InicioCrewView: View {
             
         }
     }
-}
+
 
 
 
@@ -118,6 +106,6 @@ struct ProgressBar: View {
 
 struct InicioCrewView_Previews: PreviewProvider {
     static var previews: some View {
-        InicioCrewView(rut: false)
+        InicioCrewView()
     }
 }

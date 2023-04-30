@@ -26,7 +26,7 @@ struct hackathonApp: App {
         WindowGroup {
             Group {
                 if Auth.auth().currentUser != nil {
-                    InicioCrewView(rut: false)
+                    InicioCrewView()
                 } else {
                     SignInView().environmentObject(userAuth)
                 }
