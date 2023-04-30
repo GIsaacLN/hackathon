@@ -22,10 +22,10 @@ struct error: Identifiable{
 private let errores = error(er : "error1", des : "descripcion")
 
 private let vistas = [vista(id: 1, logo: Image(systemName: "person.circle.fill")),
-            vista(id: 2, logo: Image(systemName: "person.circle.fill")),
-            vista(id: 3, logo: Image(systemName: "person.circle.fill")),
-            vista(id: 4, logo: Image(systemName: "person.circle.fill")),
-            vista(id: 5, logo: Image(systemName: "person.circle.fill"))]
+                      vista(id: 2, logo: Image(systemName: "person.circle.fill")),
+                      vista(id: 3, logo: Image(systemName: "car.fill")),
+                      vista(id: 4, logo: Image(systemName: "shield.righthalf.filled")),
+                      vista(id: 5, logo: Image(systemName: "gear"))]
 
 struct Prueba: View {
     @State private var progress: Double = 0.46
@@ -57,6 +57,10 @@ struct Prueba: View {
                     .padding()
                 
             }
+            .padding(.bottom)
+            
+            Spacer(minLength: 40)
+            
 
                 // Aquí puedes agregar los elementos para mostrar los hazards y warnings
                 ForEach([errores]) { error in
@@ -65,10 +69,16 @@ struct Prueba: View {
                     }
                 }
             .padding(.top)
+            
+            
+            
 
             Spacer()
-
-            HStack {
+            
+                
+            }
+            
+          /*  HStack {
                 ForEach(vistas) { vista in
                     Button(action: {
                         // Acción para cada botón
@@ -78,30 +88,11 @@ struct Prueba: View {
                     }
                     .padding()
                 }
-            }
-        }
+            }*/
         .padding(.top)
     }
 }
 
-struct ProgressBar: View {
-    @Binding var value: Double
-
-    var body: some View {
-        GeometryReader { geometry in
-            ZStack(alignment: .leading) {
-                Rectangle()
-                    .opacity(0.3)
-                    .foregroundColor(.blue)
-
-                Rectangle()
-                    .foregroundColor(.blue)
-                    .frame(width: geometry.size.width * CGFloat(value))
-            }
-            .cornerRadius(10)
-        }
-    }
-}
 
 struct Prueba_Previews: PreviewProvider {
     static var previews: some View {

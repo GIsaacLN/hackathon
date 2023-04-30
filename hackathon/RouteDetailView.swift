@@ -22,18 +22,7 @@ struct RouteDetailView: View {
             .padding(.top)
             
             Spacer()
-            
-            HStack {
-                ForEach(0..<5) { index in
-                    Button(action: {
-                        // Acción para cada botón
-                    }) {
-                        // Contenido visual para cada botón
-                        Image(systemName: "circle.fill")
-                    }
-                    .padding()
-                }
-            }
+    
         }
         .padding(.top)
         .navigationBarTitle("", displayMode: .inline)

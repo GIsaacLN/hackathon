@@ -45,6 +45,7 @@
 		FE3868FB29FE02B40037FB0D /* Screen12View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3868FA29FE02B40037FB0D /* Screen12View.swift */; };
 		FE3868FD29FE054C0037FB0D /* AvenirNext-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE3868FC29FE054C0037FB0D /* AvenirNext-Regular.ttf */; };
 		FEDA9B0629FEDB7D008C18CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEDA9B0529FEDB7D008C18CC /* GoogleService-Info.plist */; };
+		FEDA9B0829FEECAD008C18CC /* TAbBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA9B0729FEECAD008C18CC /* TAbBarView.swift */; };
 		FEFF2FF529FEE17900989B83 /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFF2FF429FEE17900989B83 /* TripView.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		FE3868FA29FE02B40037FB0D /* Screen12View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen12View.swift; sourceTree = "<group>"; };
 		FE3868FC29FE054C0037FB0D /* AvenirNext-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AvenirNext-Regular.ttf"; path = "/Users/Rayito/Documents/buena buenisima/hackathon/Fuentes/AvenirNext-Regular.ttf"; sourceTree = "<absolute>"; };
 		FEDA9B0529FEDB7D008C18CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FEDA9B0729FEECAD008C18CC /* TAbBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAbBarView.swift; sourceTree = "<group>"; };
 		FEFF2FF429FEE17900989B83 /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +175,7 @@
 				FE3868F029FDFD7F0037FB0D /* RouteDetailView.swift */,
 				FE3868EC29FDF0450037FB0D /* VehicleView.swift */,
 				FE3868E629FDEBB10037FB0D /* Prueba.swift */,
+				FEDA9B0729FEECAD008C18CC /* TAbBarView.swift */,
 				FE3868EA29FDEFFA0037FB0D /* TripStatusView.swift */,
 				FEFF2FF429FEE17900989B83 /* TripView.swift */,
 				58AC680529FDEED6001A1612 /* UserListView.swift */,
@@ -381,6 +384,7 @@
 			files = (
 				FE3868F529FDFE620037FB0D /* SettingsView.swift in Sources */,
 				FE3868FB29FE02B40037FB0D /* Screen12View.swift in Sources */,
+				FEDA9B0829FEECAD008C18CC /* TAbBarView.swift in Sources */,
 				58AC680629FDEED6001A1612 /* UserListView.swift in Sources */,
 				58AC67F829FD9252001A1612 /* SignUpView.swift in Sources */,
 				58AC680A29FEBC0A001A1612 /* memberSignUpView.swift in Sources */,
@@ -567,6 +571,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "hackathon/GoogleService-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Fleet Guard";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -602,6 +608,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "hackathon/GoogleService-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Fleet Guard";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

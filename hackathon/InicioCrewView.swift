@@ -9,17 +9,21 @@ import SwiftUI
 import FirebaseAuth //Para Cerrar Sesión
 
 
+private let errores = error(er : "error1", des : "descripcion")
+
+
 struct InicioCrewView: View {
-    @EnvironmentObject var userAuth: UserAuth
+    @EnvironmentObject var userAuth: UserAuth //Para Cerrar Sesión
     @State private var inicio = false
     @State private var perfil = false
     @State private var vehiculo = false
     @State private var mapa = false
     @State private var ajustes = false
     @State private var progress = 0.8
-    
+
     var body: some View {
-        NavigationView {
+        
+        NavigationView{
             VStack {
                 
                 Button(action: userAuth.signOut) {
@@ -30,10 +34,10 @@ struct InicioCrewView: View {
                         .cornerRadius(8)
                 }
                 .padding(.top)
-
                 
                 Section(){
                     Text("Empresa")
+                        .font(.title)
                 }
                 
                 Spacer()
@@ -43,77 +47,66 @@ struct InicioCrewView: View {
                         Text("¡Bienvenidos!")
                             .font(.title)
                     }
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Text("Resumen del viaje")
+                }
+                    NavigationLink(destination: RouteDetailView(routeName: "sadasdasd")){
+                        Text("resumen")
+                    }
+                    
                     HStack{
-                        Spacer()
+                        
                         Image(systemName: "box.truck")
                             .resizable()
-                            .frame(width:30,height:30)
-                        ProgressView(value:progress)
-                        Image(systemName: "airplane")
+                            .frame(width:60,height:50)
+                            .padding()
                         
+                        ProgressBar(value: $progress)
+                            .frame(height: 20)
+                            .padding()
                         
-                        NavigationStack{
-                            Text("")
-                                .toolbar {
-                                    ToolbarItemGroup(placement: .bottomBar) {
-                                        Button(action:  {
-                                            print("Pressed")
-                                        }) {
-                                            Image(systemName: "person.circle.fill")
-                                                .foregroundColor(.black)
-                                        }
-                                        
-                                        Spacer()
-                                        
-                                        Button(action:  {
-                                            print("Pressed")
-                                        }) {
-                                            Image(systemName: "car.fill")
-                                                .foregroundColor(.black)
-                                        }
-                                        
-                                        Spacer()
-                                        
-                                        Button(action:  {
-                                            print("Pressed")
-                                        }) {
-                                            Image(systemName: "house")
-                                                .resizable()
-                                                .foregroundColor(.black)
-                                                .frame(width: 50, height: 40)
-                                        }
-                                        Spacer()
-                                        
-                                        Button(action:  {
-                                            print("Pressed")
-                                        }) {
-                                            Image(systemName: "map.fill")
-                                                .foregroundColor(.black)
-                                        }
-                                        
-                                        Spacer()
-                                        
-                                        Button(action: {
-                                            print("Pressed")
-                                        }) {
-                                            Image(systemName: "gear")
-                                                .foregroundColor(.black)
-                                        }
-                                    }
-                                }
+                        Image(systemName: "mappin.and.ellipse")
+                            .resizable()
+                            .frame(width:60,height:60)
+                            .padding()
+                        
+                    }
+                    .padding(.bottom)
+                    .frame(height: 300)
+                    
+                    
+                    // Aquí puedes agregar los elementos para mostrar los hazards y warnings
+                    ForEach([errores]) { error in
+                        HStack{
+                            Text(error.er)
                         }
                     }
+                    .padding(.top)
+                    
                 }
             }
+            
+        }
+    }
+
+
+
+struct ProgressBar: View {
+    @Binding var value: Double
+
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack(alignment: .leading) {
+                Rectangle()
+                    .opacity(0.3)
+                    .foregroundColor(.blue)
+
+                Rectangle()
+                    .foregroundColor(.blue)
+                    .frame(width: geometry.size.width * CGFloat(value))
+            }
+            .cornerRadius(10)
         }
     }
 }
-
 
 struct InicioCrewView_Previews: PreviewProvider {
     static var previews: some View {
