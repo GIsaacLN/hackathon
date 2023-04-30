@@ -22,7 +22,7 @@ struct InicioCrewView: View {
             
             Section(){
                     Text("Empresa")
-                    .font(Font.custom("against regular", size: 30))
+                    .font(Font.custom("against_regular", size: 30))
             }
             
             Spacer()
@@ -30,7 +30,7 @@ struct InicioCrewView: View {
             Section(){
                 HStack{
                     Text("¡Bienvenidos!")
-                        .font(.system(size: 36))
+                        .font(.title)
                 }
             Spacer()
             Spacer()
